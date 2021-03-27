@@ -10,8 +10,7 @@ public class Application {
     Display display = new Display();
     Console console = new Console();
     Integer numberOfPets = 0;
-    Scanner scanner = new Scanner(System.in);
-    List<Pet> pets = new ArrayList<Pet>();
+    List<Pet> pets = new ArrayList<>();
 
     public void applicationEngine() {
         setNumberOfPets(display.requestNumberOfPets());
@@ -46,6 +45,7 @@ public class Application {
         Collections.sort(pets);
         System.out.println(pets.toString());
     }
+
 
     public void addPet(Pet pet) {
         pets.add(pet);
