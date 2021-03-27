@@ -2,10 +2,6 @@ package io.zipcoder;
 
 public class Dog extends Pet{
 
-    public Dog(){
-
-    }
-
     public Dog(String name, String speak) {
         this.name = "dog";
         this.speak = "bark";

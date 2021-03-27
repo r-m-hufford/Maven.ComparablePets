@@ -2,6 +2,7 @@ package io.zipcoder;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,13 +28,13 @@ public class Application {
             String pet = display.inputPetType();
             switch (pet.toLowerCase()) {
                 case "dog":
-                    addPet(new Dog());
+                    addPet(new Dog("dog", "bark"));
                     break;
                 case "cat":
-                    addPet(new Cat());
+                    addPet(new Cat("cat", "meow"));
                     break;
                 case "fish":
-                    addPet(new Fish());
+                    addPet(new Fish("fish", "blub"));
                     break;
                 default:
                     System.out.println("Please enter a valid pet.");
@@ -42,6 +43,7 @@ public class Application {
     }
 
     public void printPets() {
+        Collections.sort(pets);
         System.out.println(pets.toString());
     }
 
