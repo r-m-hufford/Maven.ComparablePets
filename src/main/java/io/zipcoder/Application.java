@@ -8,13 +8,12 @@ import java.util.Scanner;
 
 public class Application {
     Display display = new Display();
-    Console console = new Console();
     Integer numberOfPets = 0;
     List<Pet> pets = new ArrayList<>();
 
     public void applicationEngine() {
         setNumberOfPets(display.requestNumberOfPets());
-        listEachPet(numberOfPets);
+        listEachPet(display.inputPetType(numberOfPets));
         printPets();
     }
 
@@ -22,10 +21,10 @@ public class Application {
         this.numberOfPets = requestNumberOfPets;
     }
 
-    public void listEachPet(Integer numberOfPets) {
-        for (int i = 0; i < numberOfPets; i++) {
-            String pet = display.inputPetType();
-            switch (pet.toLowerCase()) {
+    public void listEachPet(List<String> pets) {
+        for (int i = 0; i < pets.size(); i++) {
+            //String input from display
+            switch (pets.get(i).toLowerCase()) {
                 case "dog":
                     addPet(new Dog("dog", "bark"));
                     break;
