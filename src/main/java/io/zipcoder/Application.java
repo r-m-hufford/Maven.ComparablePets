@@ -1,12 +1,9 @@
 package io.zipcoder;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class Application {
+public class Application implements Comparator<Pet> {
     Display display = new Display();
     Integer numberOfPets = 0;
     List<Pet> pets = new ArrayList<>();
@@ -54,5 +51,17 @@ public class Application {
     public Pet getPet(Integer index) {
         return pets.get(index);
     }
+
+    @Override
+    public int compare(Pet o1, Pet o2) {
+        return 0;
+    }
+
+    /*@Override
+    public int compare(Pet o1, Pet o2) {
+        return -o1.getType().compareTo(o2.getType());
+    }
+
+    Arrays.sort(warehouse, (a,b) -> a.getType().compareTo(b.getType())*/
 }
 
