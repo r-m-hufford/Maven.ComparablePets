@@ -42,7 +42,7 @@ public class FishTest {
         Fish fish = new Fish("slimy", "blub");
         fish.setName("fishy");
 
-        String expected = "fishy";
+        String expected = "fish";
         String actual = fish.getName();
 
         assertEquals(expected, actual);
