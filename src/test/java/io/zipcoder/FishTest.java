@@ -46,5 +46,6 @@ public class FishTest {
         String actual = fish.getName();
 
         assertEquals(expected, actual);
+        // fishy comment
     }
 }
